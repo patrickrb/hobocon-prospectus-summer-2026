@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobocon 2026 - Sponsor Prospectus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== PAGE SETUP ===== */
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg-deep: #0a0a0f;
+            --bg-dark: #0f1117;
+            --bg-card: #161822;
+            --surface: #1e2030;
+            --border: rgba(255,255,255,0.08);
+            --border-light: rgba(255,255,255,0.12);
+            --text: #e8e6e3;
+            --text-dim: #9a9faa;
+            --text-muted: #5a5f6e;
+            --amber: #f59e0b;
+            --amber-glow: #f59e0b33;
+            --amber-light: #fbbf24;
+            --cyan: #06b6d4;
+            --cyan-glow: #06b6d422;
+            --green: #10b981;
+            --purple: #8b5cf6;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #333;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ===== PAGE CONTAINER ===== */
+        .page {
+            width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            padding: 0.65in 0.7in;
+            position: relative;
+            overflow: hidden;
+            background: var(--bg-deep);
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page + .page {
+            page-break-before: always;
+        }
+
+        /* On screen, add spacing between pages for preview */
+        @media screen {
+            .page { margin: 20px auto; box-shadow: 0 4px 40px rgba(0,0,0,0.6); }
+        }
+
+        /* ===== UTILITY ===== */
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--amber);
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 0.75rem;
+        }
+        .section-title em {
+            font-style: italic;
+            color: var(--amber);
+        }
+
+        /* ===== PAGE 1: COVER ===== */
+        .cover {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -10%, var(--amber-glow), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 90%, var(--cyan-glow), transparent);
+            z-index: 1;
+        }
+        .cover-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/PXL_20251228_162322138.RAW-01.MP.COVER.jpg') center/cover;
+            opacity: 0.12;
+            filter: saturate(0.3);
+        }
+        .cover-content {
+            position: relative;
+            z-index: 2;
+        }
+        .cover-badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border: 1px solid var(--amber);
+            border-radius: 100px;
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 1.5rem;
+            background: rgba(245, 158, 11, 0.08);
+        }
+        .cover h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.5rem;
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.4rem;
+        }
+        .cover h1 .outline {
+            -webkit-text-stroke: 2px var(--amber);
+            color: transparent;
+        }
+        .cover-sub {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.6rem;
+        }
+        .cover-tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--cyan);
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+        }
+        .cover-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        .cover-meta-item { text-align: center; }
+        .cover-meta-item .value {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .cover-meta-item .label {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+        .cover-footer {
+            position: absolute;
+            bottom: 0.65in;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 2;
+        }
+        .cover-footer p {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
+        }
+        .cover-footer .seckc {
+            color: var(--amber);
+            font-weight: 600;
+        }
+
+        /* ===== PAGE 2: ABOUT ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1.8rem;
+            align-items: start;
+        }
+        .about-text p {
+            color: var(--text-dim);
+            margin-bottom: 0.9rem;
+            font-size: 0.78rem;
+            line-height: 1.65;
+        }
+        .about-text p strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nonprofit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 10px;
+            padding: 0.65rem 1rem;
+            margin-top: 0.5rem;
+        }
+        .nonprofit-badge .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: var(--green);
+        }
+        .nonprofit-badge .info .title {
+            font-weight: 600;
+            font-size: 0.7rem;
+            color: var(--green);
+        }
+        .nonprofit-badge .info .desc {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+        }
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .about-quote {
+            margin-top: 1.2rem;
+            padding: 1rem 1.2rem;
+            background: var(--bg-card);
+            border-radius: 10px;
+            border-left: 3px solid var(--amber);
+        }
+        .about-quote p {
+            font-size: 0.75rem;
+            font-style: italic;
+            color: var(--text-dim);
+            margin: 0;
+            line-height: 1.5;
+        }
+        .about-quote .attr {
+            font-style: normal;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+        }
+
+        /* ===== PAGE 3: JOURNEY ===== */
+        .page-dark { background: var(--bg-dark); }
+        .journey-intro {
+            text-align: center;
+            max-width: 5.5in;
+            margin: 0 auto 1.5rem;
+        }
+        .journey-intro p {
+            color: var(--text-dim);
+            font-size: 0.82rem;
+        }
+        .timeline {
+            position: relative;
+            max-width: 6.5in;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0.3rem;
+            bottom: 0.3rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--amber), var(--cyan), var(--purple), var(--green));
+            transform: translateX(-50%);
+        }
+        .timeline-stop {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.4rem;
+            position: relative;
+        }
+        .timeline-stop:last-child { margin-bottom: 0; }
+        .timeline-stop:nth-child(odd) { flex-direction: row-reverse; }
+        .timeline-stop:nth-child(odd) .timeline-content { text-align: right; padding-right: 1.8rem; padding-left: 0; }
+        .timeline-stop:nth-child(even) .timeline-content { padding-left: 1.8rem; }
+        .timeline-content { width: 50%; }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--amber);
+            transform: translateX(-50%);
+            box-shadow: 0 0 12px var(--amber-glow);
+            z-index: 2;
+        }
+        .timeline-content h3 {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.15rem;
+        }
+        .timeline-content .time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--amber);
+            margin-bottom: 0.3rem;
+        }
+        .timeline-content p {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            line-height: 1.55;
+        }
+        .journey-photo-strip {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+        }
+        .journey-photo-strip img {
+            flex: 1;
+            height: 1.3in;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        /* ===== PAGE 4: INAUGURAL TRIP ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 0.9rem 0.5rem;
+            border-radius: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+        }
+        .stat-number {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--amber);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        .stat-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.6rem;
+        }
+        .photo-grid .photo {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            height: 2in;
+        }
+        .photo-grid .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .inaugural-footer {
+            margin-top: 0.8rem;
+            text-align: center;
+        }
+        .inaugural-footer p {
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            max-width: 5.5in;
+            margin: 0 auto;
+        }
+        .inaugural-footer strong {
+            color: var(--text);
+        }
+
+        /* ===== PAGE 5: WHY SPONSOR ===== */
+        .why-intro {
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        .why-intro p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            max-width: 5.2in;
+            margin: 0 auto;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.7rem;
+        }
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            border-top: 2px solid transparent;
+        }
+        .why-card:nth-child(1) { border-top-color: var(--amber); }
+        .why-card:nth-child(2) { border-top-color: var(--cyan); }
+        .why-card:nth-child(3) { border-top-color: var(--purple); }
+        .why-card:nth-child(4) { border-top-color: var(--green); }
+        .why-card:nth-child(5) { border-top-color: #ef4444; }
+        .why-card:nth-child(6) { border-top-color: var(--amber-light); }
+        .why-card .icon-wrap {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+        }
+        .why-card:nth-child(1) .icon-wrap { background: rgba(245, 158, 11, 0.12); }
+        .why-card:nth-child(2) .icon-wrap { background: rgba(6, 182, 212, 0.12); }
+        .why-card:nth-child(3) .icon-wrap { background: rgba(139, 92, 246, 0.12); }
+        .why-card:nth-child(4) .icon-wrap { background: rgba(16, 185, 129, 0.12); }
+        .why-card:nth-child(5) .icon-wrap { background: rgba(239, 68, 68, 0.12); }
+        .why-card:nth-child(6) .icon-wrap { background: rgba(251, 191, 36, 0.12); }
+        .why-card h3 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+        .why-card p {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+        .why-footer-note {
+            margin-top: 1.2rem;
+            text-align: center;
+            padding: 0.8rem;
+            background: var(--bg-card);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        .why-footer-note p {
+            font-size: 0.68rem;
+            color: var(--text-dim);
+        }
+        .why-footer-note strong { color: var(--amber); }
+
+        /* ===== PAGE 6: SPONSOR TIERS ===== */
+        .tiers-intro {
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        .tiers-intro p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            max-width: 5in;
+            margin: 0 auto;
+        }
+        .tiers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.7rem;
+            align-items: start;
+        }
+        .tier-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 1.1rem 0.9rem;
+            position: relative;
+        }
+        .tier-card.featured {
+            border-color: var(--amber);
+            background: linear-gradient(180deg, rgba(245,158,11,0.06) 0%, var(--bg-card) 40%);
+        }
+        .tier-card.featured::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--amber), var(--amber-light));
+            color: var(--bg-deep);
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 0.2rem 0.7rem;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+        .tier-name {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+        .tier-card.featured .tier-name { color: var(--amber); }
+        .tier-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.15rem;
+            line-height: 1;
+        }
+        .tier-price span { font-size: 0.75rem; font-weight: 400; color: var(--text-dim); }
+        .tier-desc {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border);
+            line-height: 1.4;
+        }
+        .tier-features { list-style: none; }
+        .tier-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.22rem 0;
+            font-size: 0.68rem;
+            color: var(--text-dim);
+        }
+        .tier-features li .check {
+            flex-shrink: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+        }
+        .tier-features li .check.yes {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+        }
+        .tier-features li .check.no {
+            background: rgba(255,255,255,0.04);
+            color: var(--text-muted);
+        }
+
+        /* ===== PAGE 7: A LA CARTE ===== */
+        .alacarte-intro {
+            text-align: center;
+            margin-bottom: 1.2rem;
+        }
+        .alacarte-intro p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            max-width: 5.5in;
+            margin: 0 auto;
+        }
+        .alacarte-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.7rem;
+        }
+        .alacarte-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+        .alacarte-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .alacarte-card:nth-child(1) .alacarte-icon { background: rgba(245, 158, 11, 0.12); }
+        .alacarte-card:nth-child(2) .alacarte-icon { background: rgba(6, 182, 212, 0.12); }
+        .alacarte-card:nth-child(3) .alacarte-icon { background: rgba(139, 92, 246, 0.12); }
+        .alacarte-card:nth-child(4) .alacarte-icon { background: rgba(16, 185, 129, 0.12); }
+        .alacarte-body h3 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 0.15rem;
+        }
+        .alacarte-body .price {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--amber);
+            margin-bottom: 0.4rem;
+        }
+        .alacarte-body p {
+            font-size: 0.63rem;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+        .alacarte-body .qty {
+            display: inline-block;
+            margin-top: 0.45rem;
+            font-size: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.2rem 0.5rem;
+            border-radius: 100px;
+            background: rgba(255,255,255,0.04);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+        .alacarte-custom {
+            grid-column: 1 / -1;
+            border-top-color: var(--amber);
+        }
+        .alacarte-custom .alacarte-icon { background: rgba(245,158,11,0.12); }
+        .alacarte-note {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ===== PAGE 8: CONTACT ===== */
+        .contact-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+        }
+        .contact-page::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 50% 80%, var(--amber-glow), transparent),
+                radial-gradient(ellipse 50% 40% at 20% 40%, var(--cyan-glow), transparent);
+        }
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+        .contact-content .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 0.6rem;
+        }
+        .contact-content .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            max-width: 4.5in;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 0.7rem 2rem;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--amber), var(--amber-light));
+            color: var(--bg-deep);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .contact-details {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        .contact-detail { text-align: center; }
+        .contact-detail .label {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            margin-bottom: 0.2rem;
+        }
+        .contact-detail .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text);
+        }
+        .contact-detail .value .amber { color: var(--amber); }
+        .contact-footer {
+            position: absolute;
+            bottom: 0.65in;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 2;
+        }
+        .contact-footer p {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== PAGE NUMBER ===== */
+        .page-num {
+            position: absolute;
+            bottom: 0.45in;
+            right: 0.7in;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-muted);
+        }
+        .page-id {
+            position: absolute;
+            bottom: 0.45in;
+            left: 0.7in;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0.8rem 0;
+        }
+        .divider .line {
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .divider .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--amber);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: COVER ==================== -->
+<div class="page cover">
+    <div class="cover-bg"></div>
+    <div class="cover-content">
+        <div class="cover-badge">Sponsor Prospectus &mdash; Summer 2026</div>
+        <h1>HOB<span class="outline">O</span>CON</h1>
+        <div class="cover-sub">The Hacking Conference on Rails</div>
+        <div class="cover-tagline">// Kansas City to Chicago via Amtrak Lincoln Service</div>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <div class="value">60</div>
+                <div class="label">Hackers</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">~11hr</div>
+                <div class="label">Journey</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">1</div>
+                <div class="label">Private Car</div>
+            </div>
+            <div class="cover-meta-item">
+                <div class="value">501(c)(3)</div>
+                <div class="label">Tax Deductible</div>
+            </div>
+        </div>
+    </div>
+    <div class="cover-footer">
+        <p>A production of <span class="seckc">SecKC.org</span> &mdash; a registered 501(c)(3) non-profit</p>
+    </div>
+</div>
+
+<!-- ==================== PAGE 2: ABOUT ==================== -->
+<div class="page">
+    <div class="section-label">// What is Hobocon</div>
+    <h2 class="section-title">A conference that <em>moves.</em></h2>
+
+    <div class="about-grid">
+        <div class="about-text">
+            <p>
+                Hobocon is the world's only hacking conference held aboard a moving train. Born from the
+                Kansas City security community, it brings together <strong>information security professionals,
+                hackers, researchers, and enthusiasts</strong> for an unforgettable multi-day journey of
+                learning, collaboration, and community.
+            </p>
+            <p>
+                For Summer 2026, we're chartering a <strong>private train car</strong> on Amtrak's Lincoln Service
+                from Kansas City to Chicago&mdash;an approximately 11-hour ride through the heartland.
+                Once in Chicago, a chartered bus brings everyone to our hotel, where the party continues
+                with our friends from <strong>Burbsec</strong>.
+            </p>
+            <p>
+                This isn't your typical conference. There are no fluorescent-lit hotel ballrooms.
+                Just <strong>60 hackers, rolling countryside, and 11 hours of uninterrupted community</strong>.
+            </p>
+            <div class="nonprofit-badge">
+                <div class="icon">&#10003;</div>
+                <div class="info">
+                    <div class="title">501(c)(3) via SecKC.org</div>
+                    <div class="desc">All sponsorships are tax-deductible charitable donations</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="about-image">
+                <img src="images/signal-2025-12-28-03-40-49-307.jpg" alt="Hobocon crew at Union Station">
+            </div>
+            <div class="about-quote">
+                <p>"I went to Hobocon 2025, and all I got was banned from Amtrak."</p>
+                <p class="attr">&mdash; An actual sign held up on the train</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">02</div>
+</div>
+
+<!-- ==================== PAGE 3: JOURNEY ==================== -->
+<div class="page page-dark">
+    <div class="journey-intro">
+        <div class="section-label">// The Route</div>
+        <h2 class="section-title">The <em>Journey</em></h2>
+        <p>Summer 2026 takes us from Kansas City to Chicago aboard our own private train car.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-stop">
+            <div class="timeline-content">
+                <div class="time">Morning</div>
+                <h3>Kansas City, MO</h3>
+                <p>Board the Amtrak Lincoln Service at Union Station. Our private car means we set the vibe from the very start.</p>
+            </div>
+            <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-stop">
+            <div class="timeline-content">
+                <div class="time">All Day</div>
+                <h3>On the Rails</h3>
+                <p>~11 hours of hacking, talks, badge soldering, CTF challenges, and building community through the Missouri and Illinois countryside.</p>
+            </div>
+            <div class="timeline-dot" style="background: var(--cyan); box-shadow: 0 0 12px var(--cyan-glow);"></div>
+        </div>
+        <div class="timeline-stop">
+            <div class="timeline-content">
+                <div class="time">Evening</div>
+                <h3>Chicago, IL</h3>
+                <p>Arrive at Union Station. A chartered shuttle bus takes the crew straight to our hotel with a block of rooms reserved.</p>
+            </div>
+            <div class="timeline-dot" style="background: var(--purple); box-shadow: 0 0 12px rgba(139,92,246,0.3);"></div>
+        </div>
+        <div class="timeline-stop">
+            <div class="timeline-content">
+                <div class="time">Night</div>
+                <h3>Chicago Pub Crawl</h3>
+                <p>Team up with Burbsec for a pub crawl. Each bar features a sponsor&mdash;collect stamps at every stop, turn in your completed card for a prize drawing on the ride home.</p>
+            </div>
+            <div class="timeline-dot" style="background: var(--amber-light); box-shadow: 0 0 12px var(--amber-glow);"></div>
+        </div>
+        <div class="timeline-stop">
+            <div class="timeline-content">
+                <div class="time">Next Day</div>
+                <h3>The Ride Home</h3>
+                <p>Board the return train. Prize drawings from the pub crawl, lightning talks, and planning next year's adventure.</p>
+            </div>
+            <div class="timeline-dot" style="background: var(--green); box-shadow: 0 0 12px rgba(16,185,129,0.3);"></div>
+        </div>
+    </div>
+
+    <div class="journey-photo-strip">
+        <img src="images/DSC_5000.JPG" alt="Hacking on the train">
+        <img src="images/signal-2025-12-27-09-03-00-093.jpg" alt="Hobocon badge">
+        <img src="images/signal-2025-12-27-21-49-10-471.jpg" alt="Night cityscape">
+    </div>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">03</div>
+</div>
+
+<!-- ==================== PAGE 4: INAUGURAL TRIP ==================== -->
+<div class="page">
+    <div style="text-align:center;margin-bottom:1rem;">
+        <div class="section-label">// Hobocon I &mdash; December 2025</div>
+        <h2 class="section-title">The <em>Inaugural</em> Trip</h2>
+        <p style="color:var(--text-dim);font-size:0.8rem;max-width:5.5in;margin:0.3rem auto 0;">
+            In late December 2025, 25 hackers bought their own tickets and hopped aboard
+            the train from Kansas City to St. Louis. No sponsors, no plan&mdash;just community.
+        </p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">25</div>
+            <div class="stat-label">Hackers Aboard</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">6</div>
+            <div class="stat-label">States Represented</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">KCY</div>
+            <div class="stat-label">Departure</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">STL</div>
+            <div class="stat-label">Destination</div>
+        </div>
+    </div>
+
+    <div class="photo-grid">
+        <div class="photo">
+            <img src="images/signal-2025-12-28-11-23-06-722.jpg" alt="Banned from Amtrak sign">
+        </div>
+        <div class="photo">
+            <img src="images/signal-2025-12-27-21-27-32-895.jpg" alt="Crew in St. Louis">
+        </div>
+        <div class="photo">
+            <img src="images/PXL_20251228_162322138.RAW-01.MP.COVER.jpg" alt="Working on the train">
+        </div>
+    </div>
+
+    <div class="inaugural-footer">
+        <div class="divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
+        <p>
+            Attendees traveled from <strong>Texas, Colorado, California, Iowa, Missouri, and Kansas</strong>.
+            We hacked on laptops, soldered badges, explored St. Louis, and proved that the security community
+            doesn't need a convention center to build something incredible. For Summer 2026, we're going
+            bigger&mdash;a private car, 60 people, and Chicago as our destination.
+        </p>
+    </div>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">04</div>
+</div>
+
+<!-- ==================== PAGE 5: WHY SPONSOR ==================== -->
+<div class="page page-dark">
+    <div class="why-intro">
+        <div class="section-label">// Why Sponsor</div>
+        <h2 class="section-title">Why Support <em>Hobocon?</em></h2>
+        <p>
+            This isn't a tradeshow. It's 60 engaged security professionals in a train car for 11 hours.
+            Your brand doesn't compete for attention&mdash;it's part of the journey.
+        </p>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="icon-wrap">&#127903;</div>
+            <h3>Captive Audience</h3>
+            <p>No hallway track to get lost in. For 11 hours, every attendee is in the same car. Your brand gets genuine, sustained attention.</p>
+        </div>
+        <div class="why-card">
+            <div class="icon-wrap">&#129309;</div>
+            <h3>Intimate Community</h3>
+            <p>60 attendees means real conversations, not badge scanning. Decision-makers, researchers, and builders in infosec.</p>
+        </div>
+        <div class="why-card">
+            <div class="icon-wrap">&#128640;</div>
+            <h3>Growing Fast</h3>
+            <p>From 25 self-funded hackers to 60 in a private car in one iteration. The most unique con in the scene. Get in early.</p>
+        </div>
+        <div class="why-card">
+            <div class="icon-wrap">&#9989;</div>
+            <h3>Tax Deductible</h3>
+            <p>Hobocon operates under SecKC.org, a registered 501(c)(3). Every dollar of sponsorship counts as a charitable donation.</p>
+        </div>
+        <div class="why-card">
+            <div class="icon-wrap">&#127775;</div>
+            <h3>Multi-State Reach</h3>
+            <p>Attendees travel from across the country. Your brand reaches security pros in TX, CO, CA, IA, MO, KS, and beyond.</p>
+        </div>
+        <div class="why-card">
+            <div class="icon-wrap">&#128293;</div>
+            <h3>Unforgettable</h3>
+            <p>People don't forget a hacking conference on a train. Your brand becomes part of a story people tell for years.</p>
+        </div>
+    </div>
+
+    <div class="why-footer-note">
+        <p>Sponsorship does not guarantee a speaking slot. Hobocon is community-driven and all content is selected on merit.
+        <strong>All sponsorships are tax-deductible through SecKC.org, a 501(c)(3) non-profit.</strong></p>
+    </div>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">05</div>
+</div>
+
+<!-- ==================== PAGE 6: SPONSOR TIERS ==================== -->
+<div class="page">
+    <div class="tiers-intro">
+        <div class="section-label">// Sponsorship Tiers</div>
+        <h2 class="section-title">Choose Your <em>Ticket</em></h2>
+        <p>Every level of support makes this journey possible and puts your brand in front of the infosec community.</p>
+    </div>
+
+    <div class="tiers-grid">
+        <!-- Pass the Hat -->
+        <div class="tier-card">
+            <div class="tier-name">Pass the Hat</div>
+            <div class="tier-price">$500<span>+</span></div>
+            <div class="tier-desc">Show your support and get your name out there.</div>
+            <ul class="tier-features">
+                <li><span class="check yes">&#10003;</span> Logo on Hobocon website</li>
+                <li><span class="check yes">&#10003;</span> Social media shout-outs</li>
+                <li><span class="check yes">&#10003;</span> Logo in conference program</li>
+                <li><span class="check no">&mdash;</span> Logo on event shirt</li>
+                <li><span class="check no">&mdash;</span> Verbal recognition</li>
+                <li><span class="check no">&mdash;</span> Attendee tickets included</li>
+            </ul>
+        </div>
+
+        <!-- Conductor (Featured) -->
+        <div class="tier-card featured">
+            <div class="tier-name">Conductor</div>
+            <div class="tier-price">$1,500</div>
+            <div class="tier-desc">The backbone of Hobocon. Full visibility on and off the train.</div>
+            <ul class="tier-features">
+                <li><span class="check yes">&#10003;</span> Everything in Pass the Hat</li>
+                <li><span class="check yes">&#10003;</span> Logo on event shirt</li>
+                <li><span class="check yes">&#10003;</span> Verbal recognition on train</li>
+                <li><span class="check yes">&#10003;</span> Logo in all printed materials</li>
+                <li><span class="check yes">&#10003;</span> Items in swag bags</li>
+                <li><span class="check yes">&#10003;</span> "Booth" setup at your seat</li>
+                <li><span class="check yes">&#10003;</span> 1 attendee ticket included</li>
+                <li><span class="check yes">&#10003;</span> Pick one a la carte add-on <span style="font-size:0.55rem;color:var(--text-muted);display:block;margin-left:1.35rem;">(badge sponsorship excluded)</span></li>
+            </ul>
+        </div>
+
+        <!-- Railroad Baron -->
+        <div class="tier-card">
+            <div class="tier-name">Railroad Baron</div>
+            <div class="tier-price">$3,000</div>
+            <div class="tier-desc">Title-level sponsorship. Maximum visibility, maximum impact.</div>
+            <ul class="tier-features">
+                <li><span class="check yes">&#10003;</span> Everything in Conductor</li>
+                <li><span class="check yes">&#10003;</span> Dedicated social media feature</li>
+                <li><span class="check yes">&#10003;</span> 4 attendee tickets included</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">06</div>
+</div>
+
+<!-- ==================== PAGE 7: A LA CARTE ==================== -->
+<div class="page page-dark">
+    <div class="alacarte-intro">
+        <div class="section-label">// A La Carte Sponsorships</div>
+        <h2 class="section-title">Pick Your <em>Adventure</em></h2>
+        <p>Sponsor something specific. Each a la carte item includes logo on the website, social media recognition, and verbal shout-outs on the train.</p>
+    </div>
+
+    <div class="alacarte-grid">
+        <div class="alacarte-card">
+            <div class="alacarte-icon">&#127860;</div>
+            <div class="alacarte-body">
+                <h3>Lunch on the Train</h3>
+                <div class="price">Price: TBD</div>
+                <p>Feed 60 hungry hackers on the rails. Your logo on signage and the eternal gratitude of a private train car full of well-fed security professionals.</p>
+                <div class="qty">Qty Available: 1</div>
+            </div>
+        </div>
+        <div class="alacarte-card">
+            <div class="alacarte-icon">&#128652;</div>
+            <div class="alacarte-body">
+                <h3>Hotel Shuttle Bus</h3>
+                <div class="price">Price: TBD</div>
+                <p>Charter the bus from Chicago Union Station to our hotel. Your brand is the first thing attendees see when they arrive in the Windy City.</p>
+                <div class="qty">Qty Available: 1</div>
+            </div>
+        </div>
+        <div class="alacarte-card">
+            <div class="alacarte-icon">&#127866;</div>
+            <div class="alacarte-body">
+                <h3>Chicago Pub Crawl</h3>
+                <div class="price">Price: TBD</div>
+                <p>Sponsor a bar on the pub crawl with Burbsec. Each bar has a sponsor stamp&mdash;attendees collect them all for a prize drawing on the ride home.</p>
+                <div class="qty">Multiple Spots Available</div>
+            </div>
+        </div>
+        <div class="alacarte-card">
+            <div class="alacarte-icon">&#128161;</div>
+            <div class="alacarte-body">
+                <h3>Blinky Badge</h3>
+                <div class="price">Price: TBD</div>
+                <p>Sponsor the electronic conference badge. Your logo on the back of every badge&mdash;a collectible keepsake attendees treasure for years.</p>
+                <div class="qty">Qty Available: 1</div>
+            </div>
+        </div>
+        <div class="alacarte-card alacarte-custom">
+            <div class="alacarte-icon">&#128171;</div>
+            <div class="alacarte-body">
+                <h3>Custom Sponsorship</h3>
+                <div class="price">Let's Talk</div>
+                <p>Have a creative idea? We love working with sponsors to build unique activations. If you can dream it, we can probably put it on a train. Reach out and let's make it happen.</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="alacarte-note">All a la carte sponsorships include website logo, social media recognition, and verbal shout-outs aboard the train.</p>
+
+    <div class="page-id">Hobocon 2026</div>
+    <div class="page-num">07</div>
+</div>
+
+<!-- ==================== PAGE 8: CONTACT ==================== -->
+<div class="page">
+    <div class="contact-page">
+        <div class="contact-content">
+            <div class="section-label">// All Aboard</div>
+            <h2 class="section-title">Ready to <em>Ride?</em></h2>
+            <p class="subtitle">
+                Join us for the most unique sponsorship opportunity in information security.
+                Let's build something unforgettable together.
+            </p>
+            <div class="contact-btn">hobocon@seckc.org</div>
+            <div class="contact-details">
+                <div class="contact-detail">
+                    <div class="label">Email</div>
+                    <div class="value"><span class="amber">hobocon@seckc.org</span></div>
+                </div>
+                <div class="contact-detail">
+                    <div class="label">Organization</div>
+                    <div class="value">SecKC.org</div>
+                </div>
+                <div class="contact-detail">
+                    <div class="label">Tax Status</div>
+                    <div class="value">501(c)(3)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-footer">
+        <p>&copy; 2026 Hobocon &mdash; A SecKC.org Production &mdash; All sponsorships are tax-deductible charitable donations</p>
+    </div>
+</div>
+
+</body>
+</html>
