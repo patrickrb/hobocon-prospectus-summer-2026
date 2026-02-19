@@ -197,13 +197,13 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 1.8rem;
+            gap: 2.2rem;
             align-items: start;
         }
         .about-text p {
             color: var(--text-dim);
             margin-bottom: 0.9rem;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             line-height: 1.65;
         }
         .about-text p strong {
@@ -353,12 +353,12 @@
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 0.8rem;
+            gap: 0.9rem;
             margin-bottom: 1.2rem;
         }
         .stat-card {
             text-align: center;
-            padding: 0.9rem 0.5rem;
+            padding: 1rem 0.5rem;
             border-radius: 12px;
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -385,7 +385,7 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
-            height: 2in;
+            height: 2.8in;
         }
         .photo-grid .photo img {
             width: 100%;
@@ -480,7 +480,7 @@
         /* ===== PAGE 6: SPONSOR TIERS ===== */
         .tiers-intro {
             text-align: center;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.6rem;
         }
         .tiers-intro p {
             font-size: 0.8rem;
@@ -498,7 +498,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 14px;
-            padding: 1.1rem 0.9rem;
+            padding: 1.3rem 1rem;
             position: relative;
         }
         .tier-card.featured {
@@ -569,6 +569,36 @@
         .tier-features li .check.no {
             background: rgba(255,255,255,0.04);
             color: var(--text-muted);
+        }
+
+        .community-callout {
+            margin-top: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green);
+            border-radius: 10px;
+        }
+        .community-callout .callout-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--green);
+            white-space: nowrap;
+        }
+        .community-callout .callout-price {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .community-callout .callout-desc {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            line-height: 1.4;
         }
 
         /* ===== PAGE 7: A LA CARTE ===== */
@@ -746,6 +776,15 @@
             color: var(--text-muted);
         }
 
+        /* ===== FLEX-FILL UTILITY ===== */
+        .page-fill {
+            display: flex;
+            flex-direction: column;
+        }
+        .page-fill .fill-grow {
+            flex: 1;
+        }
+
         /* ===== DIVIDER ===== */
         .divider {
             display: flex;
@@ -801,11 +840,11 @@
 </div>
 
 <!-- ==================== PAGE 2: ABOUT ==================== -->
-<div class="page">
+<div class="page page-fill">
     <div class="section-label">// What is Hobocon</div>
     <h2 class="section-title">A conference that <em>moves.</em></h2>
 
-    <div class="about-grid">
+    <div class="about-grid fill-grow">
         <div class="about-text">
             <p>
                 Hobocon is the world's only hacking conference held aboard a moving train. Born from the
@@ -867,7 +906,7 @@
             <div class="timeline-content">
                 <div class="time">All Day</div>
                 <h3>On the Rails</h3>
-                <p>~11 hours of hacking, talks, badge soldering, CTF challenges, and building community through the Missouri and Illinois countryside.</p>
+                <p>~11 hours of hacking, talks, CTF challenges, and building community through the Missouri and Illinois countryside.</p>
             </div>
             <div class="timeline-dot" style="background: var(--cyan); box-shadow: 0 0 12px var(--cyan-glow);"></div>
         </div>
@@ -908,8 +947,8 @@
 </div>
 
 <!-- ==================== PAGE 4: INAUGURAL TRIP ==================== -->
-<div class="page">
-    <div style="text-align:center;margin-bottom:1rem;">
+<div class="page page-fill">
+    <div style="text-align:center;margin-bottom:1.5rem;">
         <div class="section-label">// Hobocon I &mdash; December 2025</div>
         <h2 class="section-title">The <em>Inaugural</em> Trip</h2>
         <p style="color:var(--text-dim);font-size:0.8rem;max-width:5.5in;margin:0.3rem auto 0;">
@@ -937,7 +976,7 @@
         </div>
     </div>
 
-    <div class="photo-grid">
+    <div class="photo-grid fill-grow">
         <div class="photo">
             <img src="images/signal-2025-12-28-11-23-06-722.jpg" alt="Banned from Amtrak sign">
         </div>
@@ -953,7 +992,7 @@
         <div class="divider"><div class="line"></div><div class="dot"></div><div class="line"></div></div>
         <p>
             Attendees traveled from <strong>Texas, Colorado, California, Iowa, Missouri, and Kansas</strong>.
-            We hacked on laptops, soldered badges, explored St. Louis, and proved that the security community
+            We hacked on laptops, explored St. Louis, and proved that the security community
             doesn't need a convention center to build something incredible. For Summer 2026, we're going
             bigger&mdash;a private car, 60 people, and Chicago as our destination.
         </p>
@@ -1017,31 +1056,31 @@
 </div>
 
 <!-- ==================== PAGE 6: SPONSOR TIERS ==================== -->
-<div class="page">
+<div class="page page-fill">
     <div class="tiers-intro">
         <div class="section-label">// Sponsorship Tiers</div>
         <h2 class="section-title">Choose Your <em>Ticket</em></h2>
         <p>Every level of support makes this journey possible and puts your brand in front of the infosec community.</p>
     </div>
 
-    <div class="tiers-grid">
+    <div class="tiers-grid fill-grow">
         <!-- Pass the Hat -->
         <div class="tier-card">
             <div class="tier-name">Pass the Hat</div>
-            <div class="tier-price">$500<span>+</span></div>
+            <div class="tier-price">$750<span>+</span></div>
             <div class="tier-desc">Show your support and get your name out there.</div>
             <ul class="tier-features">
                 <li><span class="check yes">&#10003;</span> Logo on Hobocon website</li>
                 <li><span class="check yes">&#10003;</span> Social media shout-outs</li>
                 <li><span class="check yes">&#10003;</span> Logo in conference program</li>
-                <li><span class="check no">&mdash;</span> Logo on event shirt</li>
+                <li><span class="check yes">&#10003;</span> Logo on event shirt</li>
                 <li><span class="check no">&mdash;</span> Verbal recognition</li>
                 <li><span class="check no">&mdash;</span> Attendee tickets included</li>
             </ul>
         </div>
 
         <!-- Conductor (Featured) -->
-        <div class="tier-card featured">
+        <div class="tier-card">
             <div class="tier-name">Conductor</div>
             <div class="tier-price">$1,500</div>
             <div class="tier-desc">The backbone of Hobocon. Full visibility on and off the train.</div>
@@ -1065,9 +1104,16 @@
             <ul class="tier-features">
                 <li><span class="check yes">&#10003;</span> Everything in Conductor</li>
                 <li><span class="check yes">&#10003;</span> Dedicated social media feature</li>
-                <li><span class="check yes">&#10003;</span> 4 attendee tickets included</li>
+                <li><span class="check yes">&#10003;</span> 2 attendee tickets included</li>
             </ul>
         </div>
+
+    </div>
+
+    <div class="community-callout">
+        <span class="callout-title">Community Organization</span>
+        <span class="callout-price">$500</span>
+        <span class="callout-desc">Conductor-level benefits for registered non-profits, hacker spaces, and community groups.</span>
     </div>
 
     <div class="page-id">Hobocon 2026</div>
