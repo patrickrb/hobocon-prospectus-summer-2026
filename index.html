@@ -197,14 +197,14 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 2.2rem;
+            gap: 2.4rem;
             align-items: start;
         }
         .about-text p {
             color: var(--text-dim);
-            margin-bottom: 0.9rem;
-            font-size: 0.82rem;
-            line-height: 1.65;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
         }
         .about-text p strong {
             color: var(--text);
@@ -218,7 +218,7 @@
             border: 1px solid rgba(16, 185, 129, 0.2);
             border-radius: 10px;
             padding: 0.65rem 1rem;
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
         }
         .nonprofit-badge .icon {
             width: 30px;
@@ -874,10 +874,6 @@
             <div class="about-image">
                 <img src="images/signal-2025-12-28-03-40-49-307.jpg" alt="Hobocon crew at Union Station">
             </div>
-            <div class="about-quote">
-                <p>"I went to Hobocon 2025, and all I got was banned from Amtrak."</p>
-                <p class="attr">&mdash; An actual sign held up on the train</p>
-            </div>
         </div>
     </div>
 
@@ -976,7 +972,7 @@
         </div>
     </div>
 
-    <div class="photo-grid fill-grow">
+    <div class="photo-grid">
         <div class="photo">
             <img src="images/signal-2025-12-28-11-23-06-722.jpg" alt="Banned from Amtrak sign">
         </div>
@@ -1063,7 +1059,13 @@
         <p>Every level of support makes this journey possible and puts your brand in front of the infosec community.</p>
     </div>
 
-    <div class="tiers-grid fill-grow">
+    <div class="tiers-grid">
+        <div class="community-callout" style="grid-column: 1 / -1;">
+            <span class="callout-title">Community Organization</span>
+            <span class="callout-price">$500</span>
+            <span class="callout-desc">Conductor-level benefits for registered non-profits, hacker spaces, and community groups.</span>
+        </div>
+
         <!-- Pass the Hat -->
         <div class="tier-card">
             <div class="tier-name">Pass the Hat</div>
@@ -1092,28 +1094,21 @@
                 <li><span class="check yes">&#10003;</span> Items in swag bags</li>
                 <li><span class="check yes">&#10003;</span> "Booth" setup at your seat</li>
                 <li><span class="check yes">&#10003;</span> 1 attendee ticket included</li>
-                <li><span class="check yes">&#10003;</span> Pick one a la carte add-on <span style="font-size:0.55rem;color:var(--text-muted);display:block;margin-left:1.35rem;">(badge sponsorship excluded)</span></li>
             </ul>
         </div>
 
         <!-- Railroad Baron -->
         <div class="tier-card">
             <div class="tier-name">Railroad Baron</div>
-            <div class="tier-price">$3,000</div>
+            <div class="tier-price">$2,500</div>
             <div class="tier-desc">Title-level sponsorship. Maximum visibility, maximum impact.</div>
             <ul class="tier-features">
                 <li><span class="check yes">&#10003;</span> Everything in Conductor</li>
                 <li><span class="check yes">&#10003;</span> Dedicated social media feature</li>
                 <li><span class="check yes">&#10003;</span> 2 attendee tickets included</li>
+                <li><span class="check yes">&#10003;</span> Pick one a la carte add-on <span style="font-size:0.55rem;color:var(--text-muted);display:block;margin-left:1.35rem;">(badge sponsorship excluded)</span></li>
             </ul>
         </div>
-
-    </div>
-
-    <div class="community-callout">
-        <span class="callout-title">Community Organization</span>
-        <span class="callout-price">$500</span>
-        <span class="callout-desc">Conductor-level benefits for registered non-profits, hacker spaces, and community groups.</span>
     </div>
 
     <div class="page-id">Hobocon 2026</div>
